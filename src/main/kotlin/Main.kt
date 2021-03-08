@@ -1,6 +1,14 @@
 fun main(){
 
-    val dog = Animal("Skittles", 6, "Dog")
+    val newDog = Dog();
+    newDog.makeNoise();
+    newDog.eat();
+    newDog.sleep();
+
+    val newWhale = Whale();
+    newWhale.makeNoise();
+    newWhale.eat();
+    newWhale.sleep();
 
 }
 

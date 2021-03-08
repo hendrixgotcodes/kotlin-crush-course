@@ -1,17 +1,11 @@
-class Animal(
+abstract class Animal(
 
-    val name: String,
-    val age:Int,
-    val type:String
+    private val type:String,
+    private val legCount:Int = 4,
 
-) {
-
-    init {
-        println(
-            "Animal name: $name\n"+
-                    "Animal Type: $type\n"+
-                    "Animal age: $age months")
-        ;
-    }
+    ) {
+    abstract fun makeNoise();
+    abstract fun eat();
+    abstract fun sleep();
 
 }
