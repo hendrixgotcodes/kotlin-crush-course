@@ -1,16 +1,34 @@
 fun main(){
 
-    val newDog = Dog();
-    newDog.makeNoise();
-    newDog.eat();
-    newDog.sleep();
+    println("Please enter a number");
+    val number = readLine() ?: "0";
 
-    val newWhale = Whale();
-    newWhale.makeNoise();
-    newWhale.eat();
-    newWhale.sleep();
+    val parsedNumber = try {
+        number.toInt();
+    }catch (e: Exception){
+
+        0
+
+    }
+
+    println(parsedNumber)
 
 }
+
+
+//fun main(){
+//
+//    val newDog = Dog();
+//    newDog.makeNoise();
+//    newDog.eat();
+//    newDog.sleep();
+//
+//    val newWhale = Whale();
+//    newWhale.makeNoise();
+//    newWhale.eat();
+//    newWhale.sleep();
+//
+//}
 
 
 
