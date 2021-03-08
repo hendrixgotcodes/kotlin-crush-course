@@ -1,19 +1,34 @@
+import kotlin.math.log
+
 fun main(){
 
-    println("Please enter a number");
-    val number = readLine() ?: "0";
-
-    val parsedNumber = try {
-        number.toInt();
-    }catch (e: Exception){
-
-        0
-
+    val list = listOf("School", "bus", "bee", "bic", "bell", "big");
+    val count = list.count { string ->
+        string.length == 3
     }
 
-    println(parsedNumber)
+    println(count)
 
 }
+
+//fun
+
+//fun main(){
+//
+//    println("Please enter a number");
+//    val number = readLine() ?: "0";
+//
+//    val parsedNumber = try {
+//        number.toInt();
+//    }catch (e: Exception){
+//
+//        0
+//
+//    }
+//
+//    println(parsedNumber)
+//
+//}
 
 
 //fun main(){
