@@ -1,9 +1,7 @@
-import kotlin.math.log
-
 fun main(){
 
-    val list = listOf("School", "bus", "bee", "bic", "bell", "big");
-    val count = list.count { string ->
+    val list = listOf("School", "bus", "bee", "bic", "bell", "big", "lit");
+    val count = list.customCount{ string ->
         string.length == 3
     }
 
@@ -11,7 +9,34 @@ fun main(){
 
 }
 
-//fun
+fun List<String>.customCount(function: (String)-> Boolean): Int{
+
+    var count = 0;
+    for(String in this){
+
+        if(function(String)){
+
+            count ++
+
+        }
+
+    }
+
+    return  count;
+
+}
+
+
+//fun main(){
+//
+//    val list = listOf("School", "bus", "bee", "bic", "bell", "big");
+//    val count = list.count { string ->
+//        string.length == 3
+//    }
+//
+//    println(count)
+//
+//}
 
 //fun main(){
 //
