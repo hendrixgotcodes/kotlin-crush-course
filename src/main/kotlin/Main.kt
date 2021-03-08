@@ -12,12 +12,41 @@ fun printer(anArray: Array<Int>){
 
         when (aNumber) {
 
-            in 1..5 -> println("$aNumber is among first five");
-            in 6..10 -> println("$aNumber is among second five")
-            in 11..15 -> println("$aNumber is among third five")
-            in 16..20 -> println("$aNumber is among last five")
+            in 1..5 -> {
+                println("$aNumber is among first five");
+                numberCommenter(aNumber, aNumber.isOdd())
+            };
+            in 6..10 -> {
+                println("$aNumber is among second five")
+                numberCommenter(aNumber, aNumber.isOdd())
+            }
+            in 11..15 -> {
+                println("$aNumber is among third five")
+                numberCommenter(aNumber, aNumber.isOdd())
+            }
+            in 16..20 -> {
+                println("$aNumber is among last five")
+                numberCommenter(aNumber, aNumber.isOdd())
+            }
 
         }
+
+    }
+
+}
+
+fun Int.isOdd():Boolean{
+
+    return this % 2 == 0;
+
+}
+
+fun numberCommenter(number:Int, bool:Boolean){
+
+    when(bool){
+
+        false -> println("$number is odd");
+        true -> println("$number is even");
 
     }
 
